@@ -1,0 +1,17 @@
+// Text Format Mixin
+
+@mixin text-format($format) {
+  @if $format == note {
+    font-size: ms(-3);
+    text-transform: uppercase;
+    letter-spacing: ms(-16);
+    line-height: 1;
+  }
+  @else if $format == heading-small {
+    font-family: $font__headings;
+    font-size: ms(0);
+    clear: both;
+    text-transform: uppercase;
+    line-height: 1;
+  }
+}

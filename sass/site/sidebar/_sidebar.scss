@@ -1,0 +1,113 @@
+.sidebar {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    right: 0;
+    @include transform(translateX(100%));
+
+    left: auto;
+    overflow: scroll;
+    overflow-x: hidden;
+    z-index: 9000;
+    background: $color__background-drawer;
+
+    padding: 0 ms(6) 0 0;
+    color: white;
+
+    //controls closing animation
+    @include transition-property(transform, width);
+    @include transition-duration(0.7s, 0.7s);
+    @include transition-timing-function(ease-out, ease-in);
+    @include transition-delay(0s, 0.1s);
+
+
+    // .admin-bar & {
+    //     padding-top: ms(4);
+    // }
+
+    @include respondTo(atleast-medium) {
+        width: 50%;
+    }
+    @include respondTo(atleast-extra-wide) {
+        width: 40%;
+    }
+    @include respondTo(atleast-ultra-wide) {
+        width: 30%;
+    }
+
+    @include respondTo(upto-wide) {
+        padding: ms(0) 0;
+    }
+
+    .sidebar-inner {
+        max-width: ms(15);
+        margin: 0;
+        padding: 0;
+    }
+
+    &::-webkit-scrollbar {
+     display: none;
+    }
+    
+    ul, ol {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+
+    a {
+        color: $color__link-sidebar;
+        text-decoration: none;
+        &:hover {
+            color: $color__link-sidebar-hover;
+        }
+    }
+}
+
+.sidebar-toggled {
+    .sidebar {
+        @include transform(translateX(0%));
+        width: 100%;
+
+        //controls opening animation
+        @include transition-property(transform, width);
+        @include transition-duration(0.25s, 0.25s);
+        @include transition-timing-function(ease-out, ease-out);
+        @include transition-delay(0s, 0.1s);
+
+        @include respondTo(atleast-medium) {
+            width: 50%;
+            //controls opening animation for all media queries above medium
+            @include transition-property(transform, width);
+            @include transition-duration(0.35s, 0.35s);
+            @include transition-timing-function(ease-out, ease-out);
+            @include transition-delay(0s, 0.15s);
+        }
+    }
+    .site {
+        width: 100%;
+        @include respondTo(atleast-medium) {
+            width: 50%;
+
+            //controls opening animation for all media queries above medium
+            @include transition(width 0.5s ease-out 0.15s);
+        }
+        @include respondTo(atleast-extra-wide) {
+            width: 60%;
+        }
+        @include respondTo(atleast-ultra-wide) {
+            width: 70%;
+        }
+    }
+}
+.site {
+    //controls closing animation
+    @include transition(width 0.15s ease-out);
+}
+
+
+/*--------------------------------------------------------------
+## Widgets
+--------------------------------------------------------------*/
+@import "widgets";

@@ -1,0 +1,27 @@
+.site-footer {
+    padding: ms(0) ms(0) ms(1);
+    margin: ms(4) 0 0;
+    background: $color__background-footer;
+    color: $color__text-softer;
+    .site-info {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        text-align: center;
+        li {
+            display: inline-block;
+            text-transform: uppercase;
+            font-size: ms(-3);
+            letter-spacing: ms(-15);
+            margin: 0 ms(-2);
+        }
+    }
+    a {
+        display: inline-block;
+        color: $color__footerlink;
+        text-decoration: none;
+        &:hover {
+            color: $color__footerlink-hover;
+        }            
+    }
+}

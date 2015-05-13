@@ -1,0 +1,128 @@
+//
+// Colors
+//
+
+$color__base: #534347;
+//281419
+
+$color__base-tint10: tint($color__base,10%);
+$color__base-tint15: tint($color__base,15%);
+$color__base-tint20: tint($color__base,20%);
+$color__base-tint30: tint($color__base,30%);
+$color__base-tint40: tint($color__base,40%);
+$color__base-tint60: tint($color__base,60%);
+$color__base-tint70: tint($color__base,70%);
+$color__base-tint80: tint($color__base,80%);
+$color__base-tint90: tint($color__base,90%);
+$color__base-tint95: tint($color__base,95%);
+
+$color__base-shade10: shade($color__base,10%);
+$color__base-shade20: shade($color__base,20%);
+
+
+$color__accent: #C89600;
+
+$color__accent-tint10: tint($color__accent,10%);
+$color__accent-tint20: tint($color__accent,20%);
+$color__accent-tint40: tint($color__accent,40%);
+$color__accent-tint60: tint($color__accent,60%);
+$color__accent-tint80: tint($color__accent,80%);
+$color__accent-tint90: tint($color__accent,90%);
+
+$color__accent-shade10: shade($color__accent,10%);
+$color__accent-shade20: shade($color__accent,20%);
+$color__accent-shade30: shade($color__accent,30%);
+$color__accent-shade40: shade($color__accent,40%);
+$color__accent-shade60: shade($color__accent,60%);
+$color__accent-shade70: shade($color__accent,70%);
+
+
+
+//
+// Color Applications
+//
+
+// Backgrounds
+
+$color__background-body: $color__base-tint95;
+$color__background-screen: $color__base-tint95;
+$color__background-hr: $color__base-tint95;
+$color__background-pre: $color__base-tint95;
+$color__background-ins: #fff9c0;
+
+$color__background-header: $color__base-tint80;
+$color__background-archive-header: $color__base-tint90;
+$color__background-feature: $color__base-shade20;
+$color__background-drawer: $color__base-tint20;
+$color__background-footer: $color__base-tint95;
+$color__background-404: $color__accent;
+
+
+// Text
+
+$color__text-screen: #21759b;
+$color__text-input: $color__base-tint40;
+$color__text-input-focus: $color__base-tint20;
+
+$color__text-main: $color__base-tint20;
+
+$color__headings: $color__accent;
+
+$color__text-soft: $color__base-tint60;
+$color__text-softer: $color__base-tint80;
+
+$color__text-header: $color__base-tint60;
+$color__text-sidebar: $color__base-tint60;
+$color__text-shadow-sidebar: $color__base-tint20;
+
+
+// Links
+
+$color__link: $color__accent;
+$color__link-visited: $color__accent-tint10;
+$color__link-hover: $color__base-tint20;
+
+$color__link-sidebar: $color__base-tint90;
+$color__link-sidebar-hover: $color__accent;
+
+$color__titlelink: $color__base-tint20;
+$color__titlelink-hover: $color__accent;
+
+$color__asidelink: $color__base-tint60;
+$color__asidelink-hover: $color__accent;
+
+$color__link-header: $color__base-tint60;
+$color__link-header-hover: $color__base-tint40;
+
+$color__headernavlink: rgba($color__base-tint90,.7);
+$color__headernavlink-hover: #fff;
+
+$color__footerlink: $color__base-tint70;
+$color__footerlink-hover: $color__accent;
+
+
+// Forms
+
+$color__background-button: $color__accent;
+$color__background-button-hover: $color__accent-tint20;
+$color__background-button-focus: $color__accent-shade10;
+
+$color__text-button: $color__accent-tint90;
+$color__text-button-hover: #fff;
+$color__textshadow-button-hover: $color__accent-shade20;
+
+$color__border-button: $color__accent $color__accent-shade10 $color__accent-shade20;
+$color__border-button-hover: $color__accent-tint20 $color__accent-tint10 $color__accent-shade10;
+$color__border-button-focus: $color__accent-shade20 $color__accent-shade20 $color__accent-shade20;
+
+$color__outilne-button-focus: $color__accent-tint60;
+$color__outilne-field-focus: $color__base-tint90;
+
+$color__border-input: $color__base-tint80;
+$color__border-abbr: $color__base-tint60;
+
+
+// Others
+$color__border-base: $color__base-tint95;
+$color__border-sidebar: $color__base-tint10;
+$color__border-sidebar-even: $color__base-tint15;

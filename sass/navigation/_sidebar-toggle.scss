@@ -1,0 +1,158 @@
+/* 
+**  Sidebar Toggle 
+*/
+
+.no-js .sidebar-toggle {
+	display: none;
+}
+
+// Sidebar Toggle Button
+.sidebar-toggle {
+	@include animation(fadein 0.3s ease-out 1s backwards);
+
+	display: block;
+	@include clearfix();
+	box-shadow: 0 0 0 transparent;
+	text-shadow: 0 0 0 transparent;
+	border: 0 none;
+	border-radius: 0;
+	padding: 0;
+	outline: 0;
+	font-size: 1em;
+	background: transparent;
+	
+	position: absolute;
+	top: 0;
+	right: 0;
+	margin: -(ms(0)) 0 0;
+	padding: ms(1) ms(0) ms(2);
+	z-index: 100;
+
+	%hamburger-bars {
+		display: block;
+		width: ms(2);
+		height: 3px;
+		border-radius: 1px;
+		line-height: 1;
+		background: $color__headernavlink;
+	}
+
+	span {  // Hamburger bars
+		@extend %hamburger-bars;
+		text-indent: -9999px;
+		@include transition-property(color, background, opacity, width);
+		@include transition-duration(0.3s);
+		@include transition-timing-function(ease-in-out);
+		
+		&:before, 
+		&:after {
+			content: '';
+			@extend %hamburger-bars;
+			position: absolute;
+			@include transform(rotate(0deg));
+			top: ms(1);
+			@include transition-property(color, background, opacity, width);
+			@include transition-duration(0.5s);
+			@include transition-timing-function(ease-in-out);
+		}
+		&:before {
+			margin-top: -8px;
+			width: ms(1);
+		}
+		&:after {
+			margin-top: 8px;
+			width: ms(0);
+		}
+	}
+
+	
+	&:hover {
+		background: transparent;
+		box-shadow: 0 0 0 transparent;
+		text-shadow: 0 0 0 transparent;
+		border: 0 none;
+		
+		span {
+			@include transition-property(color, background, opacity, width);
+			@include transition-duration(0.15s);
+			@include transition-timing-function(ease-in-out);
+			background: $color__headernavlink-hover;
+			&:before,
+			&:after {
+				@include transition-property(color, background, opacity, width);
+				@include transition-duration(0.15s);
+				@include transition-timing-function(ease-in-out);
+				width: ms(2);
+				background: $color__headernavlink-hover;
+			}
+		}
+	}
+	&:active,
+	&:visited,
+	&:focus {	
+		box-shadow: 0 0 0 transparent;
+	}
+
+
+	// When Sidebar is visible:
+	.sidebar-toggled & {
+		position: fixed;
+		top: 0;
+		margin-top: 0;
+		z-index: 9999;
+		border: 0 none;		
+		@include transition-property(color, background, opacity, transform);
+		@include transition-duration(0.2s);
+		@include transition-timing-function(ease-in-out);
+        span {
+        	background: transparent;
+			@include transition(background 0.2s ease-in-out);
+
+        	&:before,
+			&:after {
+				width: ms(2);
+				margin-top: 0; 
+				@include transform-origin(center);
+				@include transition-property(color, background, opacity, transform);
+				@include transition-duration(0.4s);
+				@include transition-timing-function(ease-in-out);
+
+				background: $color__base-tint80;
+				height: 4px;
+			}
+			&:before {
+				@include transform(rotate(45deg));
+			}
+			&:after {
+				@include transform(rotate(-45deg));
+			}
+        }
+
+        &:hover {
+			@include transform(scale(1.1));
+    		@include transform-origin(center);
+			@include transition-property(color, background, opacity, transform);
+			@include transition-duration(0.15s);
+			@include transition-timing-function(ease-in-out);
+    		span {
+    			&:before,
+				&:after {
+					background: white;
+				}
+    		}
+		}
+	}
+	.sidebar-toggled.admin-bar & {
+		top: 32px;
+		@include respondTo(upto-medium) {
+	        top: 42px;
+	    }
+	}
+
+	//After Sidebar is closed
+	.sidebar-closed & {
+		span {
+			@include animation(fadein 0.3s ease-out 0.4s backwards);
+		}
+	}
+}
