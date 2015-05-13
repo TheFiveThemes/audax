@@ -3,8 +3,11 @@
 }
 
 .hentry {
-	margin: 0 0 ms(4);
-    padding: 0 0 ms(4);
+    @include animation(fadein 0.5s ease-out 0.3s backwards);
+
+
+	margin: 0 0 ms(8);
+    padding: 0 0 ms(8);
     border-bottom: 4px solid $color__border-base;
 
     &:last-child {
@@ -40,14 +43,21 @@
 	margin: 0 0 1.5em;
 }
 
+.entry-featured-image {
+    // @include filter(saturate(0%));
+    // &:hover {
+    //     @include filter(saturate(50%));
+    // }
+}
+
 .entry-header {
     .entry-title {
         margin-bottom: ms(-3);
         a {
             text-decoration: none;
-            color: $color__titlelink;
+            color: $color__link-title;
             &:hover {
-                color: $color__titlelink-hover;
+                color: $color__link-title-hover;
             }
         }
     }
@@ -59,9 +69,9 @@
     color: $color__text-softer;
     a {
         text-decoration: none;
-        color: $color__asidelink;
+        color: $color__link-aside;
         &:hover {
-            color: $color__asidelink-hover;
+            color: $color__link-aside-hover;
         }
     }
     span {

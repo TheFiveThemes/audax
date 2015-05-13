@@ -1,0 +1,1 @@
+!function($){$("h1.entry-title a, .single h1.entry-title").each(function(){var t=$(this).text().split(" ");t.length>1&&(t[t.length-2]+="&nbsp;"+t[t.length-1],t.pop(),$(this).html(t.join(" ")))})}(jQuery);

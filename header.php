@@ -44,16 +44,4 @@
 		</nav><!-- #site-navigation -->
 	</header><!-- #masthead -->
 
-	<section class="site-header-image">
-		<?php // Check if this is a post or page, if it has a thumbnail, and if it's a big one
-		if ( is_singular() && has_post_thumbnail( $post->ID ) ) :
-			// Houston, we have a new header image!
-			$image_id = get_post_thumbnail_id();
-			$url = wp_get_attachment_image_src( $image_id, 'magnus-large' ); ?>
-
-			<div class="section-image" style="background-image: url(<?php echo esc_attr( $url[0] ); ?>);">
-			</div><!-- .section-image --> 
-		<?php endif; // end check for featured image or standard header ?>
-	</section><!-- .site-header-image -->
-
 	<div id="content" class="site-content">

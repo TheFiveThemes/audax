@@ -40,9 +40,9 @@
     @include text-format(note);
     a {
         text-decoration: none;
-        color: $color__asidelink;
+        color: $color__link-aside;
         &:hover {
-            color: $color__asidelink-hover;
+            color: $color__link-aside-hover;
         }
     }
 }

@@ -29,10 +29,10 @@
 		width: 100%;
 		font-size: ms(-2);
 	    letter-spacing: ms(-10);
-        color: $color__headernavlink;
+        color: $color__link-headernav;
         text-decoration: none;
         &:hover {
-            color: $color__headernavlink-hover;
+            color: $color__link-headernav-hover;
         }
     }
 

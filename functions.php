@@ -146,7 +146,10 @@ function audax_scripts() {
 
 	wp_enqueue_style( 'audax-style', get_stylesheet_uri() );
 
-	wp_enqueue_script( 'audax-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20120206', true );
+	wp_enqueue_script( 'audax-navigation', get_template_directory_uri() . '/js/navigation.js', array( 'jquery' ), '20120206', true );
+
+    wp_enqueue_script( 'audax-functions', get_template_directory_uri() . '/js/functions.js', array( 'jquery' ), '20120206', true );
+
 
 	wp_enqueue_script( 'audax-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20130115', true );
 

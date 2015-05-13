@@ -34,7 +34,7 @@
 		height: 3px;
 		border-radius: 1px;
 		line-height: 1;
-		background: $color__headernavlink;
+		background: $color__link-headernav;
 	}
 
 	span {  // Hamburger bars
@@ -76,14 +76,14 @@
 			@include transition-property(color, background, opacity, width);
 			@include transition-duration(0.15s);
 			@include transition-timing-function(ease-in-out);
-			background: $color__headernavlink-hover;
+			background: $color__link-headernav-hover;
 			&:before,
 			&:after {
 				@include transition-property(color, background, opacity, width);
 				@include transition-duration(0.15s);
 				@include transition-timing-function(ease-in-out);
 				width: ms(2);
-				background: $color__headernavlink-hover;
+				background: $color__link-headernav-hover;
 			}
 		}
 	}

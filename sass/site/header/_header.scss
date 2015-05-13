@@ -1,18 +1,18 @@
 .site-header {
-    padding: ms(4) ms(2) ms(0);
-    margin: 0 auto;
-    max-width: ms(18);
-    //background: $color__background-header;
+    width: 100%;
+    margin-bottom: ms(2);
+    background: $color__background-header;
 }
 
 .site-branding {
+    padding: ms(2) ms(2);
+    margin: 0 auto;
+    max-width: ms(18);
     @include animation(fadein 0.3s ease-out backwards,movein 0.5s ease-in-out backwards);
-
-    //@include transition(all 0.5s ease-in-out);
 
     h1 {
         font-family: $font__main;
-        font-size: ms(-2);
+        font-size: ms(-1);
         letter-spacing: ms(-16);
         text-transform: uppercase;
         margin: 0 0 ms(-4);
@@ -21,13 +21,12 @@
             text-decoration: none;
             &:hover {
                 color: $color__link-header-hover;
-                //text-decoration: underline;
             }
         }
     }
     h2 {
         font-family: $font__main;
-        font-size: ms(-3);
+        font-size: ms(-2);
         font-weight: 400;
         font-style: italic;
         text-transform: none;
@@ -36,13 +35,10 @@
         color: $color__text-header;
     }
 
-    @include respondTo(upto-medium) {
-        // width: 80%;
-        // @include transition(all 0.5s ease-in-out);
-    }
-
-    .sidebar-toggled & {
-        // width: 100%;
-        // @include transition(all 0.5s ease-in-out);
+    @include respondTo(atleast-wide) {
+        padding: ms(0) ms(2);
+        h1, h2 {
+            display: inline-block;
+        }
     }
 }

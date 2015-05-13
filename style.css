@@ -456,7 +456,7 @@ abbr, acronym {
   cursor: help; }
 
 mark, ins {
-  background: #fff9c0;
+  background: #e9d599;
   text-decoration: none; }
 
 big {
@@ -645,7 +645,6 @@ textarea {
     font-family: "Playfair Display", serif;
     font-size: 1em;
     clear: both;
-    text-transform: uppercase;
     line-height: 1;
     font-size: 0.6666666667em;
     color: #dcd9da; }
@@ -969,7 +968,6 @@ a {
   font-family: "Playfair Display", serif;
   font-size: 1em;
   clear: both;
-  text-transform: uppercase;
   line-height: 1; }
   .sidebar .main-navigation h2 {
     display: none; }
@@ -1009,7 +1007,6 @@ a {
     font-family: "Playfair Display", serif;
     font-size: 1em;
     clear: both;
-    text-transform: uppercase;
     line-height: 1; }
 .comment-navigation .nav-previous,
 .posts-navigation .nav-previous,
@@ -1113,34 +1110,42 @@ blockquote.alignright {
 ## Header
 --------------------------------------------------------------*/
 .site-header {
-  padding: 2.25em 1.5em 1em;
-  margin: 0 auto;
-  max-width: 38.443359375em; }
+  width: 100%;
+  margin-bottom: 1.5em;
+  background: #dec066; }
 
 .site-branding {
+  padding: 1.5em 1.5em;
+  margin: 0 auto;
+  max-width: 38.443359375em;
   -webkit-animation: fadein 0.3s ease-out backwards, movein 0.5s ease-in-out backwards;
   -moz-animation: fadein 0.3s ease-out backwards, movein 0.5s ease-in-out backwards;
   animation: fadein 0.3s ease-out backwards, movein 0.5s ease-in-out backwards; }
   .site-branding h1 {
     font-family: "Lora", serif;
-    font-size: 0.6666666667em;
+    font-size: 0.844em;
     letter-spacing: 0.0390184423em;
     text-transform: uppercase;
     margin: 0 0 0.4444444444em; }
     .site-branding h1 a {
-      color: #bab3b5;
+      color: #C89600;
       text-decoration: none; }
       .site-branding h1 a:hover {
-        color: #978e90; }
+        color: #785a00; }
   .site-branding h2 {
     font-family: "Lora", serif;
-    font-size: 0.5626666667em;
+    font-size: 0.6666666667em;
     font-weight: 400;
     font-style: italic;
     text-transform: none;
     letter-spacing: 0.0585276635em;
     margin: 0;
-    color: #bab3b5; }
+    color: #C89600; }
+  @media (min-width: 1100px) {
+    .site-branding {
+      padding: 1em 1.5em; }
+      .site-branding h1, .site-branding h2 {
+        display: inline-block; } }
 
 /*--------------------------------------------------------------
 ## Header Feature Image
@@ -1157,9 +1162,12 @@ blockquote.alignright {
   display: block; }
 
 .hentry {
-  margin: 0 0 2.25em;
-  padding: 0 0 2.25em;
-  border-bottom: 4px solid #f6f5f5; }
+  -webkit-animation: fadein 0.5s ease-out 0.3s backwards;
+  -moz-animation: fadein 0.5s ease-out 0.3s backwards;
+  animation: fadein 0.5s ease-out 0.3s backwards;
+  margin: 0 0 5.0625em;
+  padding: 0 0 5.0625em;
+  border-bottom: 4px solid #edecec; }
   .hentry:last-child {
     border-bottom: none; }
 
@@ -1218,7 +1226,7 @@ blockquote.alignright {
 .post-navigation {
   margin: 0 0 2.25em;
   padding: 0 0 2.25em;
-  border-bottom: 4px solid #f6f5f5; }
+  border-bottom: 4px solid #edecec; }
   .post-navigation a {
     text-decoration: none; }
 
@@ -1297,7 +1305,7 @@ blockquote.alignright {
 .search-results .page-header {
   padding: 2.25em 1em 4.27275em;
   margin: 0 0 2.25em;
-  border-bottom: 4px solid #f6f5f5;
+  border-bottom: 4px solid #edecec;
   text-align: center;
   color: #bab3b5; }
   .archive .page-header .page-title,
@@ -1334,7 +1342,7 @@ blockquote.alignright {
   list-style: none;
   margin: 0;
   padding-left: 0;
-  border-left: 4px solid #f6f5f5; }
+  border-left: 4px solid #edecec; }
 
 .comment-list .children > li {
   padding-left: calc(32px + 0.8em); }
@@ -1447,29 +1455,34 @@ blockquote.alignright {
   line-height: 1;
   text-align: center;
   color: #dcd9da;
-  border-top: 4px solid #f6f5f5;
-  border-bottom: 4px solid #f6f5f5;
+  border-top: 4px solid #edecec;
+  border-bottom: 4px solid #edecec;
   padding: 1em 0; }
 
 /*--------------------------------------------------------------
 ## Footer
 --------------------------------------------------------------*/
 .site-footer {
-  padding: 1em 1em 1.266em;
-  margin: 2.25em 0 0;
-  background: #f6f5f5;
+  padding: 0 1.5em;
+  margin: 2.25em auto 0;
+  max-width: 38.443359375em;
   color: #dcd9da; }
   .site-footer .site-info {
+    border-top: 4px solid #edecec;
     list-style: none;
     margin: 0;
-    padding: 0;
+    padding: 1.5em 0 2.25em;
     text-align: center; }
     .site-footer .site-info li {
       display: inline-block;
       text-transform: uppercase;
-      font-size: 0.5626666667em;
-      letter-spacing: 0.049397348em;
-      margin: 0 0.6666666667em; }
+      font-size: 0.4444444444em;
+      letter-spacing: 0.0390184423em;
+      margin: 0 0.6666666667em;
+      padding: 0; }
+      @media (max-width: 480px) {
+        .site-footer .site-info li {
+          font-size: 0.6666666667em; } }
   .site-footer a {
     display: inline-block;
     color: #cbc6c7;
