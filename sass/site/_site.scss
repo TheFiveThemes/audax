@@ -13,10 +13,8 @@
 --------------------------------------------------------------*/
 @import "header/feature-image";
 
-.content-area {
-    padding: 0 ms(2);
-    margin: 0 auto;
-    max-width: ms(18);
+.site-main {
+    @include content-center;
 }
 
 /*--------------------------------------------------------------

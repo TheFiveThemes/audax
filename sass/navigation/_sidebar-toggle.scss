@@ -10,36 +10,48 @@
 .sidebar-toggle {
 	@include animation(fadein 0.3s ease-out 1s backwards);
 
+	@include clearfix;
 	display: block;
-	@include clearfix();
 	box-shadow: 0 0 0 transparent;
 	text-shadow: 0 0 0 transparent;
-	border: 0 none;
-	border-radius: 0;
-	padding: 0;
 	outline: 0;
 	font-size: 1em;
 	background: transparent;
-	
-	position: absolute;
-	top: 0;
-	right: 0;
-	margin: -(ms(0)) 0 0;
-	padding: ms(1) ms(0) ms(2);
-	z-index: 100;
+	z-index: 999;
+	border: 2px solid $color__border-header-button;
+	border-radius: 3px;
+
+	padding: ms(-2) ms(0);
+
+	font-size: ms(-4);
 
 	%hamburger-bars {
 		display: block;
-		width: ms(2);
-		height: 3px;
-		border-radius: 1px;
+		width: 6px;
+		height: 6px;
+		float: right;
+		border-radius: 3px;
 		line-height: 1;
 		background: $color__link-headernav;
 	}
 
-	span {  // Hamburger bars
+	.sidebar-toggle-text {
+		// clip: rect(1px, 1px, 1px, 1px);
+		// position: absolute !important;
+		// height: 1px;
+		// width: 1px;
+		// overflow: hidden;
+
+		display: block;
+		text-align: center;
+		float: right;
+	}
+
+	span.sidebar-toggle-icon {  // Hamburger bars
+		// margin-top: -6px;
+
 		@extend %hamburger-bars;
-		text-indent: -9999px;
+
 		@include transition-property(color, background, opacity, width);
 		@include transition-duration(0.3s);
 		@include transition-timing-function(ease-in-out);
@@ -47,21 +59,26 @@
 		&:before, 
 		&:after {
 			content: '';
-			@extend %hamburger-bars;
 			position: absolute;
+			@extend %hamburger-bars;
+			
 			@include transform(rotate(0deg));
-			top: ms(1);
+			
 			@include transition-property(color, background, opacity, width);
 			@include transition-duration(0.5s);
 			@include transition-timing-function(ease-in-out);
 		}
 		&:before {
-			margin-top: -8px;
-			width: ms(1);
+			left: -10px;
+			// width: ms(1);
+
+			// background:  blue; //temp
 		}
 		&:after {
-			margin-top: 8px;
-			width: ms(0);
+			left: 10px;
+			// width: ms(0);
+
+			// background:  green; //temp
 		}
 	}
 

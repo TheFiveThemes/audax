@@ -40,14 +40,20 @@ function audax_setup() {
      * @link http://codex.wordpress.org/Function_Reference/add_theme_support#Post_Thumbnails
      */
     add_theme_support( 'post-thumbnails' );
-    set_post_thumbnail_size( 256, 256, true );
     add_image_size( 'audax-large', 2000, 1500, true  );
+
+    update_option( 'thumbnail_size_w', 150 );
+    update_option( 'thumbnail_size_h', 150 );
+    update_option( 'thumbnail_crop', 1 );
+    update_option('medium_size_w', 600);
+    update_option('medium_size_h', 600);
+    update_option('large_size_w', 1200);
+    update_option('large_size_h', 1200);
 
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(
         'primary' => __( 'Primary Sidebar Navigation', 'audax' ),
 		'social'  => __( 'Social Links', 'audax' ),
-        'secondary' => __( 'Header Quick Navigation', 'audax' ),
 	) );
 
 	/*

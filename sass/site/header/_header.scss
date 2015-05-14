@@ -4,10 +4,20 @@
     background: $color__background-header;
 }
 
+.site-header-wrapper {
+    position: relative;
+    @include content-center;
+    padding-top: ms(0);
+    padding-bottom: ms(0);
+    @include respondTo(atleast-wide) {
+        padding-top: ms(-2);
+        padding-bottom: ms(-2);
+    }
+}
+
 .site-branding {
-    padding: ms(2) ms(2);
-    margin: 0 auto;
-    max-width: ms(18);
+    width: 80%;
+
     @include animation(fadein 0.3s ease-out backwards,movein 0.5s ease-in-out backwards);
 
     h1 {
@@ -36,9 +46,17 @@
     }
 
     @include respondTo(atleast-wide) {
-        padding: ms(0) ms(2);
         h1, h2 {
             display: inline-block;
         }
     }
+}
+
+.header-navigation {
+    display: none;
+
+    position: absolute;
+    top: 0;
+    right: ms(2);
+    width: 20%;
 }

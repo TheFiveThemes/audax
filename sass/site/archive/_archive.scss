@@ -1,14 +1,17 @@
 .archive,
 .search-results {
     .page-header {
-        padding: ms(4) ms(0) ms(7);
-        margin: 0 0 ms(4);
-        border-bottom: 4px solid $color__border-base;
+        padding: ms(4) ms(2) ms(6);
+        margin: 0 0 ms(6);
+        
         text-align: center;
-        color: $color__text-soft;
+        color: $color__text-pageheader;
+
+        border-bottom: $size__border-root $color__border-base;
+
         .page-title {
             font-size: ms(2);
-            color: $color__text-softer;
+            color: $color__text-pageheader;
             margin: 0;
         }
         .page-description {

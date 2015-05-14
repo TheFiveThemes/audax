@@ -1,0 +1,7 @@
+// Content Center
+
+@mixin content-center {
+    padding: 0 ms(2);
+    margin: 0 auto;
+    max-width: $size__block-maxwidth;
+}

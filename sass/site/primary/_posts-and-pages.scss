@@ -8,7 +8,7 @@
 
 	margin: 0 0 ms(8);
     padding: 0 0 ms(8);
-    border-bottom: 4px solid $color__border-base;
+    border-bottom: $size__border-content $color__border-base;
 
     &:last-child {
         border-bottom: none;
@@ -28,7 +28,7 @@
 .page-content,
 .entry-content,
 .entry-summary {
-	margin: ms(2) 0;
+	margin: ms(2) 0 0;
 
     p:first-child {
         margin-top: 0;
@@ -44,6 +44,9 @@
 }
 
 .entry-featured-image {
+    img {
+        width: 100%;
+    }
     // @include filter(saturate(0%));
     // &:hover {
     //     @include filter(saturate(50%));
@@ -84,7 +87,7 @@
 .post-navigation {
     margin: 0 0 ms(4);
     padding: 0 0 ms(4);
-    border-bottom: 4px solid $color__border-base;
+    border-bottom: $size__border-content $color__border-base;
     
     a {
         text-decoration: none;

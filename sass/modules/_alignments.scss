@@ -1,13 +1,13 @@
 .alignleft {
 	display: inline;
 	float: left;
-	margin-right: 1.5em;
+	margin-right: ms(0);
 }
 
 .alignright {
 	display: inline;
 	float: right;
-	margin-left: 1.5em;
+	margin-left: ms(0);
 }
 
 .aligncenter {
@@ -18,7 +18,7 @@
 blockquote {
     &.alignright,
     &.alignleft {
-        width: ms(13);
+        max-width: 50%;
     }
     &.alignleft {
         margin-left: 0; 
@@ -26,4 +26,5 @@ blockquote {
     &.alignright {
         margin-right: 0; 
     }
+
 }

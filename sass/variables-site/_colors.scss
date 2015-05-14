@@ -61,6 +61,7 @@ $color__text-softer: $color__base-tint80;
 $color__text-header: $color__accent;
 $color__text-sidebar: $color__base-tint60;
 $color__text-shadow-sidebar: $color__base-tint20;
+$color__text-pageheader: $color__base-tint80;
 
 // Links
 $color__link: $color__accent;
@@ -74,13 +75,14 @@ $color__link-aside: $color__base-tint60;
 $color__link-aside-hover: $color__accent;
 $color__link-header: $color__accent;
 $color__link-header-hover: $color__accent-shade40;
-$color__link-headernav: rgba($color__base-tint90,.7);
-$color__link-headernav-hover: #fff;
+$color__link-headernav: $color__accent-shade10;
+$color__link-headernav-hover: $color__accent-shade40;
 $color__link-footer: $color__base-tint70;
 $color__link-footer-hover: $color__accent;
 
 // Borders
 $color__border-base: $color__base-tint90;
+$color__border-header-button: $color__accent;
 
 // Forms
 $color__background-button: $color__accent;
