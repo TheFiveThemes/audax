@@ -1,6 +1,8 @@
 #Audax WordPress Theme
 Be Bold, Tell Your Story!
 
+![Screnshot of Audax](https://github.com/TheFiveThemes/audax/blob/master/screenshot.png?raw=true)
+
 Audax is a long-form blogging WordPress theme named after the latin word for Bold. It excells in showcasing long blocks of text, with it's refined typography-centered layout. Several breaking points guarentee great readability across multiple devices.
 
 Designed and developed originally by [Hugo Baeta](http://hugobaeta.com) as part of [The Five Themes](http://thefivethemes.com/themes/audax)
